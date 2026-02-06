@@ -4,14 +4,12 @@ session_start();
 if(isset($_COOKIE['email_username']) && isset($_COOKIE['password'])){
     $id = $_COOKIE['email_username'];
     $passwrd = $_COOKIE['password'];
-
 }
 else{
     $id = "";
     $passwrd = "";
 }
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
