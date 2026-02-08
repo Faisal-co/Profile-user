@@ -18,7 +18,7 @@ if(isset($_POST['update'])){
         $update = "UPDATE profil SET username='$username', email='$email' WHERE id='$id'";
     }
     mysqli_query($conn,$update);
-    header("Location: user-profile.php");
+    header("Location: pageprofile.php");
 }
 /* 
 When a file is uploaded, PHP automatically creates a special array:
