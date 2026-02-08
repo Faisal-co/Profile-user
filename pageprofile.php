@@ -6,7 +6,14 @@ session_start();?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo "Hi, ".$user['username']; ?></title>
+    <title><?php
+        $id = $_SESSION['user_id'];
+
+        $sql = "SELECT * FROM profil WHERE id='$id'";
+        $result = mysqli_query($conn,$sql);
+        $user = mysqli_fetch_assoc($result);
+        echo "Hi, ".$user['username']; ?>
+    </title>
 </head>
 <body style="background-color: green;">
 <?php
